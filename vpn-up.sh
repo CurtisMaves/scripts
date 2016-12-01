@@ -1,5 +1,5 @@
 #!/bin/sh
-
+#needs to be changed to match current deluge login credentials
 $dUser=<-username->
 $dPass=<-password->
 
