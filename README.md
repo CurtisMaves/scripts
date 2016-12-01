@@ -11,7 +11,7 @@ Sometimes, when connect to a VPN, it may be desirable to route specific traffic 
 This command gets the IP address of the tun0 interface (VPN interface) and then sets the Deluge daemon to bind to that IP address. It then restarts the daemon. It also starts the syncthing daemon.
 
 ##Copy files from git directory
-###[copyFromGit.sh](copyFromGit.sh]
+###[copyFromGit.sh](copyFromGit.sh)
 This copies files to their respective locations from the git directory and then adds sensitive information back into them.
 
 
