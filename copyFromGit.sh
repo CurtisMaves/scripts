@@ -16,5 +16,5 @@ cp -f /tmp/$SUDO_USER/gitcopy/nopvn.sh /etc/NetworkManager/dispatcher.d/
 chmod u+x /etc/NetworkManager/dispatcher.d/*
 chmod a-x /etc/NetworkManager/dispatcher.d/output.txt
 
-rm -rf /tmp/$USER/gitcopy
+rm -rf /tmp/$SUDO_USER/gitcopy
 
