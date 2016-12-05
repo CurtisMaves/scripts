@@ -1,5 +1,5 @@
 #!/bin/sh
-
+#needs to be changed to match current deluge login credentials
 dUser=<-username->
 dPass=<-password->
 
@@ -19,7 +19,7 @@ systemctl start syncthing@curtis.service >> /etc/NetworkManager/dispatcher.d/out
 IP_ADDR=$(ip addr show tun0 | grep -o -E 'inet [[:digit:]]{1,3}\.[[:digit:]]{1,3}\.[[:digit:]]{1,3}\.[[:digit:]]{1,3}' | grep -o -E '[^inet ]{5}.*')
 
 echo $IP_ADDR >> /etc/NetworkManager/dispatcher.d/output.txt 2>&1
-deluge-console "connect localhost $dUser  $uPass; config --set listen_interface $IP_ADDR" >> /etc/NetworkManager/dispatcher.d/output.txt 2>&1
-echo "connect localhost $dUser $uPass; config --set listen_address $IP_ADDR" >> /etc/NetworkManager/dispatcher.d/output.txt 2>&1
+deluge-console "connect localhost $dUser  $dPass; config --set listen_interface $IP_ADDR" >> /etc/NetworkManager/dispatcher.d/output.txt 2>&1
+echo "connect localhost $dUser $dPass; config --set listen_address $IP_ADDR" >> /etc/NetworkManager/dispatcher.d/output.txt 2>&1
 
 systemctl restart deluged >> /etc/NetworkManager/dispatcher.d/output.txt 2>&1
