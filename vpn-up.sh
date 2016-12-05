@@ -1,7 +1,7 @@
 #!/bin/sh
 #needs to be changed to match current deluge login credentials
-$dUser=<-username->
-$dPass=<-password->
+dUser=<-username->
+dPass=<-password->
 
 date >> /etc/NetworkManager/dispatcher.d/output.txt 2>&1
 echo $2 >> /etc/NetworkManager/dispatcher.d/output.txt 2>&1
