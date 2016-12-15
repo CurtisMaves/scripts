@@ -25,4 +25,7 @@ if [ "$2" = "down" ]; then
 	echo  >> /etc/NetworkManager/dispatcher.d/output.txt 2>&1
 	exit
 fi
-ip route add `ip route | grep -E "default.*$1"` table novpn >> /etc/NetworkManager/dispatcher.d/output.txt 2>&1
+
+ip route show table main | grep $1 | while read line; do
+	ip route add $line table novpn
+done
