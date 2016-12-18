@@ -25,7 +25,7 @@ if [ "$2" = "down" ]; then
 	echo  >> /etc/NetworkManager/dispatcher.d/output.txt 2>&1
 	exit
 fi
-
+sysctl -w net.ipv4.conf.$1.rp_filter=0
 ip route show table main | grep $1 | while read line; do
 	ip route add $line table novpn
 done

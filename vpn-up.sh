@@ -12,6 +12,9 @@ fi
 
 
 sysctl -w net.ipv6.conf.all.disable_ipv6=1
+sysctl -w net.ipv4.conf.$1.rp_filter=0
+sysctl -w net.ipv4.conf.default.rp_filter=0
+sysctl -w net.ipv4.conf.all.rp_filter=0
 systemctl status deluged || systemctl start deluged && sleep 2
 systemctl start deluged >> /etc/NetworkManager/dispatcher.d/output.txt 2>&1
 systemctl start syncthing@curtis.service >> /etc/NetworkManager/dispatcher.d/output.txt 2>&1
