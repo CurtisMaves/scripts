@@ -22,4 +22,5 @@ IP_ADDR=$(ip addr show tun0 | grep -o -E 'inet [[:digit:]]{1,3}\.[[:digit:]]{1,3
 
 echo $IP_ADDR
 echo "connect localhost $dUser $dPass; config --set listen_address $IP_ADDR"
+sleep 10
 deluge-console "connect localhost $dUser  $dPass; config --set listen_interface $IP_ADDR"
