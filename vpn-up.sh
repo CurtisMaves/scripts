@@ -16,7 +16,6 @@ sysctl -w net.ipv4.conf.$1.rp_filter=0
 sysctl -w net.ipv4.conf.default.rp_filter=0
 sysctl -w net.ipv4.conf.all.rp_filter=0
 systemctl start deluged
-systemctl start syncthing@curtis.service
 
 IP_ADDR=$(ip addr show tun0 | grep -o -E 'inet [[:digit:]]{1,3}\.[[:digit:]]{1,3}\.[[:digit:]]{1,3}\.[[:digit:]]{1,3}' | grep -o -E '[^inet ]{5}.*')
 
