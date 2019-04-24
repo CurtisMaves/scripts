@@ -4,14 +4,14 @@ A series of bash shell scripts that help me automate parts of my day to day work
 
 
 ##Routing Traffic Outside VPN
-###[novpn.sh](novpn.sh)
+### [novpn.sh](novpn.sh)
 Sometimes, when connect to a VPN, it may be desirable to route specific traffic around the VPN and allow a direct connection (for speed, lower latency, or region dependent resources). This script creates a seperate routing table called "novpn" then routes specific traffic around. If iptables can differentate the traffic from other traffic, then this script should work to route traffic around, the vpn. It easy to custimize this script by editing which traffic iptables marks.
 ##Binding Deluge VPN IP address
-###[vpn-up.sh](vpn-up.sh)
+### [vpn-up.sh](vpn-up.sh)
 This command gets the IP address of the tun0 interface (VPN interface) and then sets the Deluge daemon to bind to that IP address. It then restarts the daemon. It also starts the syncthing daemon.
 
 ##Copy files from git directory
-###[copyFromGit.sh](copyFromGit.sh)
+### [copyFromGit.sh](copyFromGit.sh)
 This copies files to their respective locations from the git directory and then adds sensitive information back into them.
 
 
